@@ -1,0 +1,57 @@
+{% extends 'main/header.html' %}
+{% load static %}
+
+
+{% block content %}
+<content>
+    {% for key, value in im_dict.items %}
+       {% if key == 'i_m' %}
+            {% for im in value %}
+                <div class="cont1">
+                    <div class="I_M">
+                        <p class="im1">HELLO</p>
+                        <h3 class="im2">I'M EMIRLAN <br> MARAT UULU</h3>
+                        <p class="i_hew">I have been doing front-end and back-end <br> development for a year now. Do you need a website <br> with website design? Then contact me</p>
+                        <a href="form.html"><button class="btn" >click to order</button></a>
+                    </div>
+
+                    <div class="crug">
+                        <div class="i_m"></div><img class="oohoo" src="{{ im.img.url }}" alt="">    
+                    </div>	
+                </div>
+
+                <div id="about" class="about">
+                    <div class="cru2">
+                        <div class="i_m_2"></div>
+                    </div>
+                    <div class="crug3">
+                        <div class="crug_3"></div>
+                    </div>
+                    <div class="about_me">
+                            <div class="iii">{{ im.title }}</div>
+                            <div class="iii">{{ im.about }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div id="project" class="crug5"></div>
+        
+            <div align="center" class="project">
+                <p class="project_hed">МОИ КЛИЕНТЫ</p>
+                <div align="center" class="project_post">
+                    <div class="post_project">
+                        {% for list in value %}
+                            {% for pro in list %}
+                                <div class="projects">
+                                    <img class="icon_project" src="{{ pro.icons.url }}" alt="">
+                                    <p class="title">{{ pro.title }}</p>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</content>
+{% endblock %}

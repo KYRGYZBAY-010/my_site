@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dewelopment</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<header id="home">
+		<div class="ufff">
+			<img class="icons" src="{% static 'img/icons8.png'%}" alt="">
+			<p class="ufff2">DEWELOPMENT</p>
+		</div>
+
+
+		<div class="nav_hed">
+			<a href="#home">HOME</a>
+			<a href="#about">ABOUT ME</a>
+			<a href="#project">MY PROJECT</a>
+			<a href="#footer">CONTACT</a>
+		</div>
+	</header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer id="footer" class="footer">
+		<p class="nom">+996 0707 080 514</p>
+		<p class="doc">Copyright © 2022, DEWELOPMENT</p>
+		<div class="head2">
+			<a href="#home">HOME</a>
+			<a href="#about">ABOUT ME</a>
+			<a href="#project">MY PROJECT</a>
+			<a href="#footer">CONTACT</a>
+		</div>
+	</footer>
+</body>
