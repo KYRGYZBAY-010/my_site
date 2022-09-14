@@ -8,4 +8,4 @@ class I_mAdmin(admin.ModelAdmin):
 
 @admin.register(Projects)
 class ProjectsAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'date']
+    list_display = ['id', 'title', 'date']  

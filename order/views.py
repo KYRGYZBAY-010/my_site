@@ -1,5 +1,3 @@
-from email.mime import image
-from http.client import IM_USED
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 from django.shortcuts import render
